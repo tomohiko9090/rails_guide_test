@@ -1,7 +1,6 @@
 # 作成したファイル
 
 ## controller
-- concerns/visible.rb
 - [articles/articles_controller.rb](https://github.com/tomohiko9090/rails_guide_test/blob/main/app/controllers/articles_controller.rb)
 - [articles/comments_controller.rb](https://github.com/tomohiko9090/rails_guide_test/blob/main/app/controllers/comments_controller.rb)
 
