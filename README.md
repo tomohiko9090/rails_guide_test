@@ -10,7 +10,7 @@
 - articles/index.html.erb
 - articles/new.html.erb
 - articles/show.html.erb
-- comments/\_form.html.erb
+- comments/\_comment.html.erb
 
 ## model
 - article.rb
