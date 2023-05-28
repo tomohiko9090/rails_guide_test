@@ -1,8 +1,8 @@
 # 作成したファイル
 
 ## controller
-- articles/articles_controller.rb
-- articles/comments_controller.rb
+- [articles/articles_controller.rb](https://github.com/tomohiko9090/rails_guide_test/blob/main/app/controllers/articles_controller.rb)
+- [articles/comments_controller.rb](https://github.com/tomohiko9090/rails_guide_test/blob/main/app/controllers/comments_controller.rb)
 
 ## view
 - articles/\_form.html.erb
