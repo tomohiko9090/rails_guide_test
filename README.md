@@ -1,6 +1,7 @@
 # 作成したファイル
 
 ## controller
+- concerns/visible.rb
 - [articles/articles_controller.rb](https://github.com/tomohiko9090/rails_guide_test/blob/main/app/controllers/articles_controller.rb)
 - [articles/comments_controller.rb](https://github.com/tomohiko9090/rails_guide_test/blob/main/app/controllers/comments_controller.rb)
 
@@ -13,6 +14,7 @@
 - comments/\_comment.html.erb
 
 ## model
+- concerns/visible.rb
 - article.rb
 - comment.rb
 
@@ -26,6 +28,8 @@
 # その他
 - schema.rb
 - routes.rb
+
+
 
 # README
 
