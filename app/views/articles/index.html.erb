@@ -1,0 +1,27 @@
+<h1>朝会コンテンツ</h1>
+
+<ul>
+<% @articles.each do |article|  %>
+<li>
+  <%# ①こてこてで書くとこれ %>
+  <%# <a href="/articles/<%= article.id %>
+  <%# <%= article.title %>
+
+  <%# ②pathを使うとちょっと便利にかける %>
+  <%# routesファイルで定義されたpathメソッドによって適当なidのページのリンク作って！となる %>
+  <%# <a href="<%= article_path(article) %>
+
+  <%# ③link_toを使うとめちゃくちゃ簡単に書ける！ %>
+  <%# routesファイルで定義された適切なパスヘルパーを呼び出して、リンクをつくって！ %>
+  <%# ヘルパーの第1引数はリンクテキスト、第2引数はリンク先 %>
+  <%= link_to article.title, article %>
+
+</li>
+
+<% end %>
+<%= link_to "New Article", new_article_path %>
+
+
+
+
+</ul>

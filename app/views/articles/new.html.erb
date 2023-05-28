@@ -1,0 +1,34 @@
+<h1>新規コンテンツ</h1>
+
+<p><%= @article.body %></p>
+
+
+<%= render "form", article: @article %>
+
+<%# パーシャルを使わない場合は以下のように書く %>
+<!-- <%= form_with model: @article do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% @article.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+      <%# full_messages_forメソッドでtitle属性でバリデーションしたエラーメッセージの配列を返す %>
+  </div>
+
+  <div>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+    <% @article.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %> %>
+-->
+
+
+<%= link_to "ホームに戻る", articles_path %>

@@ -1,0 +1,61 @@
+
+<h1><%= @article.title %></h1>
+
+<p><%= @article.body %></p>
+
+
+<ul>
+  <li><%= link_to "Edit", edit_article_path(@article) %></li>
+
+  <%# HTML属性data-turbo-methodとdata-turbo-confirmを設定している %>
+  <%# Turboはrailsのデフォルトで搭載されてる属性らしい。 %>
+  <%# turbo_confirmではAre you sure?のダイアログが表示される %>
+  <li><%= link_to "Destroy", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>
+
+
+<%# 画面にコメントを表示 %>
+<h2>Comments</h2>
+<%= render @article.comments %>
+<%# コレクションに含まれる要素を1つずつ列挙するときに、各コメントをパーシャルと同じ名前のローカル変数に自動的に代入 %>
+
+<!-- 
+<% @article.comments.each do |comment| %>
+  <p>
+    <strong>Commenter:</strong>
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+-->
+
+
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<%# form_withで配列を渡すと、/articles/1/commentsのようにネストしたルーティングを生成する %>
+<!-- <%= form_with model: [ @article, @article.comments.build ] do |form| %> 
+  <p>
+    <%= form.label :commenter %><br>
+    <%= form.text_field :commenter %>
+  </p>
+  <p>
+    <%= form.label :body %><br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+-->
+
+
+<%= link_to "ホームに戻る", articles_path %>
